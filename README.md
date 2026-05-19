@@ -1,68 +1,64 @@
-# 🧬 API-DNA CLI
+# API-DNA 🔍
 
-Free CLI tool to verify API providers — detect fake models, token inflation, and relay servers.
+> The First API Fingerprint Verification Engine — Detect fake LLM models, token inflation, speed throttling, and relay chains.
 
-[![npm version](https://img.shields.io/npm/v/api-dna-checker.svg)](https://www.npmjs.com/package/api-dna-checker)
+[![Website](https://img.shields.io/badge/Website-api--dna.com-blue)](https://api-dna.com)
+[![npm](https://img.shields.io/npm/v/api-dna)](https://www.npmjs.com/package/api-dna)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-## What It Does
+## 🌐 Live
 
-API-DNA is the **DNA test for API providers**. It detects:
+Visit **[api-dna.com](https://api-dna.com)** for free API verification — no signup required.
 
-- 🔄 **Fake model substitution** — GPT-3.5 sold as GPT-4? We'll catch it.
-- 💸 **Token count inflation** — Being charged for tokens you didn't use? We'll prove it.
-- 🔀 **Relay/proxy servers** — Someone intercepting your API calls? We'll find them.
-- 📝 **Hidden system prompts** — Provider injecting instructions? We'll expose them.
+## 🔑 Features
 
-## Install
+- **Deep Scan** — 30+ automated checks with L0-L7 trust scoring
+- **Provider Fingerprinting** — Identify 30+ LLM providers
+- **Evidence Timeline** — See every anomaly detected
+- **Token Inflation Detection** — Catch inflated token counts
+- **Model Family Detection** — Verify the actual model being served
+- **Relay Chain Detection** — Find middlemen in your API pipeline
+- **Chrome Extension** — Verify APIs directly in your browser
+- **CLI Tool** — `npx api-dna scan` for command-line verification
+
+## 🚀 Quick Start
+
+### Web (Free)
+
+Visit [api-dna.com](https://api-dna.com) and enter your API endpoint.
+
+### CLI
 
 ```bash
-npm install -g api-dna-checker
+npx api-dna scan --url https://api.example.com/v1 --key sk-xxx
 ```
 
-## Usage
+### Chrome Extension
 
-```bash
-# Quick scan an API endpoint (no API key needed)
-api-dna api.openai.com
+Install from [GitHub](https://github.com/tehdarklea/api-dna-chrome-extension).
 
-# Check a specific API key
-api-dna check sk-your-api-key-here
+## 📊 Trust Levels
 
-# Help
-api-dna --help
-```
+| Level | Confidence | Meaning |
+|-------|-----------|---------|
+| L0 | None | Completely untrusted |
+| L1-L3 | Low | Basic checks passed |
+| L4-L5 | Medium | Pattern matching confirmed |
+| L6-L7 | High | Full verification passed |
 
-## How It Works
+## 📝 Blog
 
-1. **Infrastructure Scan** — Checks IP ownership, server headers, TLS certificates
-2. **Behavioral Fingerprinting** — Sends targeted prompts to identify the real model
-3. **Token Audit** — Independently estimates token counts and compares vs. reported
-4. **Relay Detection** — Looks for proxy headers, extra latency, and certificate mismatches
+- [Best API Checker Tools in 2026](https://api-dna.com/blog/best-api-checker-tools)
+- [How to Detect Fake API Providers](https://api-dna.com/blog/how-to-detect-fake-api)
+- [OpenAI API Key Checker](https://api-dna.com/blog/openai-api-key-checker)
+- [API Token Inflation Detector](https://api-dna.com/blog/api-token-inflation-detector)
 
-## Supported Models
+## 🔗 Related Projects
 
-80+ models across 16+ families including:
-- OpenAI (GPT-4o, GPT-4-turbo, GPT-3.5-turbo, etc.)
-- Anthropic (Claude 3.5, Claude 3, etc.)
-- Google (Gemini Pro, etc.)
-- Meta (Llama 3, etc.)
-- And many more
+- **[TokenC2C](https://tokenc2c.xyz)** — P2P marketplace for API computing power
+- **[SKILL.COFFEE](https://skill.coffee)** — 4800+ AI agent skills marketplace
+- **[API Provider Fingerprint Database](https://github.com/tehdarklea/api-provider-fingerprint-database)** — Open fingerprint reference
 
-## Free & Open
-
-- ✅ No account required for basic scans
-- ✅ Supports 80+ models
-- ✅ 16+ model families
-- ✅ Quick scan without API key
-
-## Links
-
-- 🌐 **Website**: [api-dna.com](https://api-dna.com)
-- 📊 **Rankings**: [api-dna.com/ranking](https://api-dna.com/ranking)
-- 📖 **How It Works**: [api-dna.com/how-it-works](https://api-dna.com/how-it-works)
-- 📝 **Blog**: [api-dna.com/blog](https://api-dna.com/blog)
-
-## License
+## 📄 License
 
 MIT
